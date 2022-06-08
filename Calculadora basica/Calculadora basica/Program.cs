@@ -10,6 +10,10 @@ namespace Calculadora_basica
     {
         static void Main(string[] args)
         {
+            /*
+            Crear una calculadora funcional con las 4 operaciones basicas 
+            *Opcional: Que almacene el historial de operaciones
+            */
             int res = 0, num = 0, num2 = 0,opcion=0;
             bool respuesta = true;
             do
