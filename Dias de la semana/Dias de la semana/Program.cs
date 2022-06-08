@@ -10,6 +10,10 @@ namespace Dias_de_la_semana
     {
         static void Main(string[] args)
         {
+            /*
+            Crear un convertidor de numero de dia de la semana a nombre y viceversa
+            -Opcional: Hacer una opcion que te diga si es fin de semana o no
+            */
             string diaNombre=string.Empty;
             int opcion=0, diaNum = 0;
             bool res = true;
