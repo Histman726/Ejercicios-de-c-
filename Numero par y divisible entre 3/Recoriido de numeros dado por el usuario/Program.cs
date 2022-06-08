@@ -10,6 +10,11 @@ namespace Recoriido_de_numeros_dado_por_el_usuario
     {
         static void Main(string[] args)
         {
+            /*
+             Crear un programa que te diga los numeros pares y divibles entre 3
+            dentro del 1 y el numero dado por el usuario
+             */
+
             bool res = true;
             int num=0;
             do
