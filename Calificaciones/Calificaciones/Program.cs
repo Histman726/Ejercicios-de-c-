@@ -10,6 +10,11 @@ namespace Calificaciones
     {
         static void Main(string[] args)
         {
+            /*
+            El reto es poder crear una aplicacion de consola que te registre un conjunto de 
+            calificaciones de N alumnos e imprime en pantalla el alumno con peor y mejor
+            promedio
+            */
             int alumnos = 0;
             Console.WriteLine("Ingrese la cantidad de alumnos a calificar:");
             alumnos=Convert.ToInt32(Console.ReadLine());
