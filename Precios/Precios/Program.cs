@@ -10,6 +10,10 @@ namespace Precios
     {
         static void Main(string[] args)
         {
+            /*
+            Crear un programa que te solicite el precio de un producto y despues muestre las formas de pago
+            (efectivo y tarjeta), si dice tarjeta que pida el numero de cuenta (inventado)
+            */
             decimal precio = 0;
             int formaPago=0;
             bool res = true;
