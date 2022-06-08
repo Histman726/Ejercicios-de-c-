@@ -11,7 +11,6 @@ namespace Numero_par_y_divisible_entre_3
         static void Main(string[] args)
         {
             bool res = true;
-
             do
             {
                 Console.WriteLine("Numeros pares del 1 al 100");

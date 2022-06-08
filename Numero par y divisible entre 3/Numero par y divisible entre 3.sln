@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numero par y divisible entre 3", "Numero par y divisible entre 3\Numero par y divisible entre 3.csproj", "{CEDEC7A2-9FC7-4432-A446-72492250014A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recoriido de numeros dado por el usuario", "Recoriido de numeros dado por el usuario\Recoriido de numeros dado por el usuario.csproj", "{8D6A0639-7F70-4BE3-84A0-C7857437BC10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CEDEC7A2-9FC7-4432-A446-72492250014A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEDEC7A2-9FC7-4432-A446-72492250014A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEDEC7A2-9FC7-4432-A446-72492250014A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D6A0639-7F70-4BE3-84A0-C7857437BC10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D6A0639-7F70-4BE3-84A0-C7857437BC10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D6A0639-7F70-4BE3-84A0-C7857437BC10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D6A0639-7F70-4BE3-84A0-C7857437BC10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
