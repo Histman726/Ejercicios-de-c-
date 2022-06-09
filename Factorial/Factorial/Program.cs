@@ -10,6 +10,10 @@ namespace Factorial
     {
         static void Main(string[] args)
         {
+            /*
+             Crear una funcion que calcule el factorial de un numero
+             */
+
             int num = 0;
             bool res = true;
 
