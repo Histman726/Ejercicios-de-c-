@@ -10,6 +10,10 @@ namespace Recorrer_frases_y_poner_en_mayusculas
     {
         static void Main(string[] args)
         {
+            /*
+             Crear un programa que recorra los caracteres de una frase y los muestre en mayusculas
+             */
+
             string frase = string.Empty;
             bool res = true;
 
