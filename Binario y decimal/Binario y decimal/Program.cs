@@ -10,6 +10,8 @@ namespace Binario_y_decimal
     {
         static void Main(string[] args)
         {
+            //Crear un programa que convierte de decimal a binario y viceversa
+
             bool res = true;
 
             do
