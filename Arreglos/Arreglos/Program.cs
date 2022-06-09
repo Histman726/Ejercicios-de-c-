@@ -10,6 +10,10 @@ namespace Arreglos
     {
         static void Main(string[] args)
         {
+            /*
+            Crear un programa que te muestre un menu donde las opciones sean 1. Mostrar el array 2. Sumarlo
+            3. Promediarlo
+            */
             int[] array = {1,2,3,4,5,6,7,8};
             bool res = true;
             int option = 0;
