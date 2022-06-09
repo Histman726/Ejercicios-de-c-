@@ -39,5 +39,54 @@ namespace Random_numeros
             
 
         }
+        public int[] GenerarNumerosAleatoriosNoRepetidos(int longitud, int min, int max)
+        {
+
+            if (min > max)
+            {
+                int aux = min;
+                min = max;
+                max = aux;
+            }
+
+            if (longitud <= 0 || (max - min) < longitud - 1)
+            {
+                return null;
+            }
+
+            int[] numeros = new int[longitud];
+
+            bool repetido;
+            int numero;
+            int indice = 0;
+
+            while (indice < numeros.Length)
+            {
+
+                repetido = false;
+
+                numero = GenerarNumero(min, max);
+
+                for (int i = 0; i < indice; i++)
+                {
+                    if (numeros[i] == numero)
+                    {
+                        repetido = true;
+                    }
+                }
+
+                if (!repetido)
+                {
+                    numeros[indice] = numero;
+                    indice++;
+                }
+
+
+            }
+
+            return numeros;
+
+
+        }
     }
 }

@@ -25,6 +25,12 @@ namespace Random_numeros
             {
                 Console.WriteLine(arr[i]);
             }
+            Console.WriteLine("Genero 20 numeros entre 1 y 20 en un array sin repetirse");
+            int[] array = a.GenerarNumerosAleatoriosNoRepetidos(5, 1, 20);
+            for (int i = 0; array != null && i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
             Console.ReadKey();
 
         }
