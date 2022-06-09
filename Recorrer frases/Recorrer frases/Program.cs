@@ -10,6 +10,9 @@ namespace Recorrer_frases_caracter_por_caracter
     {
         static void Main(string[] args)
         {
+            /*
+             Crear un programa que recorra los caracteres de una frase y los muestre
+             */
             string frase=string.Empty;
             bool res = true;
 
