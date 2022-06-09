@@ -13,13 +13,18 @@ namespace Arreglos
             /*
             Crear un programa que te muestre un menu donde las opciones sean 1. Mostrar el array 2. Sumarlo
             3. Promediarlo
+            -Opcional: Que el array sea rellenado por el usuario
             */
-            int[] array = {1,2,3,4,5,6,7,8};
             bool res = true;
-            int option = 0;
+            int option = 0,relleno=0;
 
             do
             {
+                Console.WriteLine("Escriba el tamaño del arreglo");
+                relleno=Convert.ToInt32(Console.ReadLine());
+                var array=new int[relleno];
+                Console.WriteLine("Introduzca cada uno de los elementos del array");
+                RellenarArray(array);
                 Console.WriteLine("Menu\n 1. Mostrar array\t2. Sumar array\t3. Promedio array");
                 option=Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -69,6 +74,16 @@ namespace Arreglos
             int suma=SumarArray(array);
             var pro=Convert.ToDouble(suma/array.Length);
             return pro;
+        }
+        public static void RellenarArray(int[] array)
+        {
+            
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine("Escriba el numero en el lugar {0}", i + 1);
+                var numero = Convert.ToInt32(Console.ReadLine());
+                array[i] = numero;
+            }
         }
     }
 }
