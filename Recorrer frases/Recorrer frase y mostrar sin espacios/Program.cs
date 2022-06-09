@@ -10,6 +10,10 @@ namespace Recorrer_frase_y_mostrar_sin_espacios
     {
         static void Main(string[] args)
         {
+            /*
+             Crear un programa que recorra los caracteres de una frase y muestre la frase sin espacios
+             */
+
             bool res = true;
             string frase=string.Empty,fraseSinEspacios=string.Empty;
 
