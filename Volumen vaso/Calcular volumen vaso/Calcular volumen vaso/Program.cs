@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,8 @@ namespace Calcular_volumen_vaso
             double Volumen = 0;
             string response = string.Empty;
             double litros = 0;
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
             do
             {
                 try
@@ -93,6 +96,8 @@ namespace Calcular_volumen_vaso
                 Console.WriteLine("Desea volver a ejecutar (S/N)");
                 res = Console.ReadLine();
             } while (res=="s");
+            timer.Stop();
+            Console.WriteLine(timer.Elapsed);
         }
         static double VolumenCilindro(double diametro,double altura,double pi=3.1416)
         {
