@@ -33,9 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +68,30 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Alumnos.cs">
+      <DependentUpon>Base.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Base.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Base.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Base.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Base.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Base.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Base.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grado.cs">
+      <DependentUpon>Base.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Nivel.cs">
+      <DependentUpon>Base.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Promedio_Escuela.cs">
       <SubType>Form</SubType>
@@ -79,12 +112,15 @@
     <Compile Include="Salones_Promedio.Designer.cs">
       <DependentUpon>Salones_Promedio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\AlumnosIngreso.cs" />
     <Compile Include="Un Salon Promedio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Un Salon Promedio.Designer.cs">
       <DependentUpon>Un Salon Promedio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validaciones\AlumnosValidacion.cs" />
+    <Compile Include="Validaciones\CalificacionesValidacion.cs" />
     <EmbeddedResource Include="Inscripcion.resx">
       <DependentUpon>Inscripcion.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +148,14 @@
     <EmbeddedResource Include="Un Salon Promedio.resx">
       <DependentUpon>Un Salon Promedio.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Models\Base.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Base.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Base.edmx.diagram">
+      <DependentUpon>Base.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,5 +169,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\Base.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Base.Context.cs</LastGenOutput>
+      <DependentUpon>Base.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Base.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Base.edmx</DependentUpon>
+      <LastGenOutput>Base.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
