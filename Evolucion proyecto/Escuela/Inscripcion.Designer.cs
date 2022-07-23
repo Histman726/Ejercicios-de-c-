@@ -130,6 +130,7 @@
             this.Controls.Add(this.lblDatos);
             this.Name = "Inscripcion";
             this.Text = "Inscripcion";
+            this.Load += new System.EventHandler(this.Inscripcion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

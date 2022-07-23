@@ -130,6 +130,7 @@
             this.Controls.Add(this.lblDatos);
             this.Name = "Reinscripcion";
             this.Text = "Reinscripcion";
+            this.Load += new System.EventHandler(this.Reinscripcion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
