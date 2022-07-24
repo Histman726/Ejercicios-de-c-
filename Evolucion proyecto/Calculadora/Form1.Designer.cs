@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBasica));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.basicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sumarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.multiplicarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dividirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.figurasGeometricasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.figurasGeometricas3DToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtRes = new System.Windows.Forms.TextBox();
@@ -71,9 +75,46 @@
             // 
             // basicaToolStripMenuItem
             // 
+            this.basicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sumarToolStripMenuItem,
+            this.restarToolStripMenuItem,
+            this.multiplicarToolStripMenuItem,
+            this.dividirToolStripMenuItem});
             this.basicaToolStripMenuItem.Name = "basicaToolStripMenuItem";
             this.basicaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.basicaToolStripMenuItem.Text = "Basica";
+            // 
+            // sumarToolStripMenuItem
+            // 
+            this.sumarToolStripMenuItem.Name = "sumarToolStripMenuItem";
+            this.sumarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.sumarToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.sumarToolStripMenuItem.Text = "Sumar";
+            this.sumarToolStripMenuItem.Click += new System.EventHandler(this.btnSuma_Click);
+            // 
+            // restarToolStripMenuItem
+            // 
+            this.restarToolStripMenuItem.Name = "restarToolStripMenuItem";
+            this.restarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.restarToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.restarToolStripMenuItem.Text = "Restar";
+            this.restarToolStripMenuItem.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // multiplicarToolStripMenuItem
+            // 
+            this.multiplicarToolStripMenuItem.Name = "multiplicarToolStripMenuItem";
+            this.multiplicarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+            this.multiplicarToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.multiplicarToolStripMenuItem.Text = "Multiplicar";
+            this.multiplicarToolStripMenuItem.Click += new System.EventHandler(this.btnMulti_Click);
+            // 
+            // dividirToolStripMenuItem
+            // 
+            this.dividirToolStripMenuItem.Name = "dividirToolStripMenuItem";
+            this.dividirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.dividirToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.dividirToolStripMenuItem.Text = "Dividir";
+            this.dividirToolStripMenuItem.Click += new System.EventHandler(this.btnDiv_Click);
             // 
             // figurasGeometricasToolStripMenuItem
             // 
@@ -91,6 +132,7 @@
             // 
             this.txtRes.BackColor = System.Drawing.Color.DarkGreen;
             this.txtRes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRes.Enabled = false;
             this.txtRes.Font = new System.Drawing.Font("Digital-7", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtRes.ForeColor = System.Drawing.Color.White;
             this.txtRes.Location = new System.Drawing.Point(28, 31);
@@ -170,6 +212,9 @@
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = false;
             this.btn9.Click += new System.EventHandler(this.btn9_Click);
+            this.btn9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmBasica_KeyDown);
+            this.btn9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmBasica_KeyPress);
+            this.btn9.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmBasica_KeyDown);
             // 
             // btn8
             // 
@@ -347,6 +392,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmBasica";
             this.Text = "Calculadora Basica";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmBasica_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmBasica_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmBasica_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -380,5 +428,9 @@
         private Button btnRes;
         private Button btnPunto;
         private Button btn0;
+        private ToolStripMenuItem sumarToolStripMenuItem;
+        private ToolStripMenuItem restarToolStripMenuItem;
+        private ToolStripMenuItem multiplicarToolStripMenuItem;
+        private ToolStripMenuItem dividirToolStripMenuItem;
     }
 }
