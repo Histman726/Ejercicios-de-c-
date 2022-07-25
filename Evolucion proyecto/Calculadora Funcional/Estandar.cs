@@ -128,7 +128,9 @@ namespace Calculadora_Funcional
 
         private void figurasGometricasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Figuras frm = new Figuras();
+            frm.Show();
+            this.Hide();
         }
 
         private void btnDiv_Short(object sender, EventArgs e)
